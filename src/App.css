@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.clouds-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    transition: 1s;
+}
+
+.day{
+    background-color: skyblue;
+}
+
+.night{
+    background-color: rgb(36, 54, 87);
+}
+
+.cloud1 {
+    position: absolute;
+    top: 0;
+    left: calc(30% - 400px);
+    width: 800px;
+    height: 400px;
+    background: url('./images/cld.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: cloud1 5s ease-in-out;
+    z-index: -1;
+}
+
+@keyframes cloud1 {
+    0% {    
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(28%-400px);
+    }
+}
+
+.cloud2 {
+    position: absolute;
+    top: calc(50% - 200px);
+    right: 0;
+    width: 800px;
+    height: 400px;
+    background: url('./images/cld.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: cloud2 5s ease-in-out;
+    z-index: -1;
+}
+
+@keyframes cloud2 {
+    0% {    
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(50%+400px);
+    }
+}
+
+.cloud3{
+    position: absolute;
+    bottom: -100px;
+    left: 300px;
+    width: 800px;
+    height: 400px;
+    background: url('./images/cld.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: cloud3 4s ease-in-out;
+    z-index: -1;
+    /* opacity: 0.1; */
+}
+
+@keyframes cloud3 {
+    0% {    
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(50%-400px);
+    }
+}
+
+.ice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 300px;
+    /* background: url('./images/ice2.png') no-repeat; */
+    background-size: cover;
+    /* background-position: center; */
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+    transform: rotate(180deg);
+    filter: blur(0px);
+    animation: ice1 5s ease-in-out;
+}
+
+@keyframes ice1 {
+    0% {
+        rotate: 180deg;
+        transform: translateX(100%);
+    }
+    100% {
+        rotate: 180deg;
+        transform: translateX(0%);
+        /* transform: rotate(180deg); */
+    }
+}
+
+.ice3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('./images/ice3.png') no-repeat; */
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.15;
+    transform: rotate(180deg);
+    filter: blur(0px);
+    animation: ice3 5s ease-in-out;
+}
+
+@keyframes ice3 {
+    0% {
+        opacity: 0;
+    }
+    100% {opacity: 0.2;
+    }
+}

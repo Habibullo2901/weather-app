@@ -1,0 +1,104 @@
+.skeleton {
+  background-color: rgba(70, 131, 180, 0.438);
+    height: 20px;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 20px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Har xil balandliklar uchun qo'shimcha o'zgarishlar */
+
+  .hero__info__sun.skeleton{
+    width: 210px;
+    height: 60px;
+  }
+
+  .hero__info__city.skeleton {
+    width: 180px;
+    height: 60px;
+  }
+  
+  .hero__info__temp.skeleton {
+    width: 60px;
+    height: 48px;
+  }
+  
+  .hero__info__date.skeleton {
+    width: 180px;
+    height: 30px;
+  }
+
+  .hero__info__details__item{
+    width: 120px;
+    height: 50px;
+  }
+
+  /* Umumiy Skeleton */
+.skeleton {
+    position: relative;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden; 
+  }
+  
+  /* Shimmer effekt */
+  .skeleton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(224, 224, 224, 0) 0%, 
+      rgba(255, 255, 255, 0.4) 50%, 
+      rgba(224, 224, 224, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+    border-radius: 10px; 
+  }
+  
+  /* Shaffof chekka effekt */
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: radial-gradient(
+      rgba(224, 224, 224, 0.5) 0%,
+      rgba(224, 224, 224, 0.4) 20%,
+      rgba(224, 224, 224, 0.3) 40%,
+      rgba(224, 224, 224, 0.2) 60%,
+      rgba(224, 224, 224, 0) 100%
+    );
+  }
+  
+  /* Shimmer animatsiyasi */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  

@@ -1,0 +1,145 @@
+.hourly_temps {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0 30px;
+}
+
+.hourly_temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(70, 131, 180, 0.442);
+    border-radius: 20px;
+    position: relative;
+    padding: 5px 15px;
+    margin: 10px 5px;
+}
+
+.hourly_temp__img , .hourly_temp__temp {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.hourly_temp__fon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgb(98, 156, 204);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    border-radius: 20px;
+    bottom: -10px;
+}
+
+.hourly_temp__time {
+    color: #fff;
+    color-interpolation-filters: sRGB;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* *************** */
+.hourly_temp {
+    padding : 5px 15px;
+    width: 94px;
+    height: 143px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.skeletonna-loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 20px 30px;
+    width: 100%;
+    /* gap: 15px; */
+}
+
+.skeletonna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(70, 131, 180, 0.408);
+    border-radius: 20px;
+    position: relative;  /* Bu yerda relative joylashuv kerak */
+    padding: 5px 15px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    width: 94px;
+    /* height: 143px; */
+}
+
+.skeletonna__img,
+.skeletonna__temp,
+.skeletonna__time,
+.skeletonna__fon {
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+
+.skeletonna__img {
+    position: relative;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonna__time {
+    width: 49px;
+    height: 26px;
+    margin-bottom: 8px;
+}
+
+.skeletonna__temp {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.skeletonna__fon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgb(98, 156, 204);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    border-radius: 20px;
+    bottom: -10px;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(224, 224, 224, 0.5);
+    }
+    25% {
+        background-color: rgba(224, 224, 224, 0.4);
+    }
+    50% {
+        background-color: rgba(224, 224, 224, 0.3);
+    }
+    75% {
+        background-color: rgba(224, 224, 224, 0.2);
+    }
+    100% {
+        background-color: rgba(224, 224, 224, 0);
+    }
+}
+

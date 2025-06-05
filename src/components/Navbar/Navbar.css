@@ -1,0 +1,503 @@
+.navbar {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.head__icon {
+    max-width: 60px;
+    width: 100%;
+}
+
+.head {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.head h2 {
+    text-align: center;
+    font-size: 59px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.head p {
+    text-align: end;
+    font-size: 19px;
+    padding-right: 60px;
+    color: #fff;
+}
+
+/* ******* */
+
+.head__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 700px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.aqi__sec {
+    display: none;
+}
+
+.head__info__aqi, .head__info__winddeg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    gap: 10px;
+}
+
+.wind__degr {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.pole_n {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 6px);
+}
+
+.pole_s {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 6px);
+}
+
+.pole_w {
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 5px;
+}
+
+.pole_e {
+    position: absolute;
+    top: calc(50% - 18px);
+    right: 5px;
+}
+
+.wind__deg__icon{
+    width: 70px;
+    height: 70px;
+    margin-top: 25px;
+    margin-left: 25px;
+    padding: 8px;
+}
+
+/* ******* */
+
+.navbar__switch {
+    position: relative;
+    margin-bottom: 0px;
+    margin-right: 80px;
+}
+
+#switcher {
+    display: none;
+}
+
+.switch__circle {
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: steelblue;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-top: -15px;
+    transition: 1s;
+}
+
+.switch__circle::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+    border-radius: 50%;
+    z-index: 2;
+    top: 5px;
+    left: 5px;
+    transition: 0.7s;
+}
+
+#switcher:checked~.navbar__switch__cont .switch__circle {
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 16px;
+    background-color: teal;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#switcher:checked~.navbar__switch__cont .switch__circle::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+    border-radius: 50%;
+    z-index: 2;
+    top: 5px;
+    left: 55px;
+    transition: 0.7s;
+}
+
+.head__switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.head__switch p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.head__switch__f {
+    margin-right: 24px;
+}
+
+/* ******* */
+
+@media screen and (max-width: 1400px) {
+    .navbar {
+        max-width: 1000px;
+    }
+
+    .head__icon {
+        max-width: 40px;
+    }
+
+    .head {
+        max-width: 400px;
+        padding: 0 10px;
+    }
+
+    .head h2 {
+        font-size: 39px;
+        font-weight: 200;
+    }
+    
+    .head p {
+        font-size: 14px;
+        padding-right: 30px;
+    }
+
+    /* ******* */
+
+    .head__info{
+        max-width: 320px;
+        padding: 0;
+    }
+    
+    .head__info__aqi, .head__info__winddeg{
+        font-size: 18px;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .wind__degr {
+        width: 80px;
+        height: 80px;
+    }
+
+    .wind__deg__icon{
+        width: 45px;
+        height: 45px;
+        margin-top: 15px;
+        margin-left: 15px;
+        padding: 8px;
+    }
+
+    .pole {
+        font-size: 15px;
+    }
+    
+    .pole_w {
+        top: calc(50% - 13px);
+    }
+    
+    .pole_e {
+        top: calc(50% - 13px);
+    }
+    
+    /* ******* */
+
+    .navbar__switch {
+        margin-right: 70px;
+    }
+
+    .switch__circle , #switcher:checked~.navbar__switch__cont .switch__circle {
+        padding: 10px;
+        width: 70px;
+        margin-top: -10px;
+    }
+    
+    .switch__circle::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle::after , 
+    .switch__circle::after {
+        top: 2px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle::after {
+        left: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        max-width: 600px;
+    }
+
+    .head__icon {
+        max-width: 30px;
+    }
+
+    .head {
+        max-width: 300px;
+        padding: 0 10px;
+    }
+
+    .head h2 {
+        font-size: 30px;
+        font-weight: 200;
+    }
+    
+    .head p {
+        font-size: 12px;
+        padding-right: 30px;
+    }
+
+    /* ******* */
+
+    .head__info{
+        max-width: 220px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .head__info__aqi, .head__info__winddeg{
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    .wind__degr {
+        width: 60px;
+        height: 60px;
+    }
+
+    .wind__deg__icon{
+        width: 35px;
+        height: 35px;
+        margin-top: 10px;
+        margin-left: 11px;
+        padding: 8px;
+    }
+
+    .pole {
+        font-size: 13px;
+    }
+    
+    .pole_w {
+        top: calc(50% - 10px);
+    }
+    
+    .pole_e {
+        top: calc(50% - 11px);
+    }
+    
+    /* ******* */
+
+    .navbar__switch {
+        margin-right: 50px;
+    }
+
+    .switch__circle , #switcher:checked~.navbar__switch__cont .switch__circle {
+        padding: 10px;
+        width: 55px;
+        margin-top: -10px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle {
+        position: absolute;
+        width: 55px;
+    }
+    
+    .switch__circle::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle::after {
+        left: 35px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        max-width: 400px;
+    }
+
+    .head__icon {
+        max-width: 35px;
+    }
+
+    .head {
+        max-width: 400px;
+        padding: 0 10px;
+    }
+
+    .head h2 {
+        font-size: 25px;
+        font-weight: 200;
+    }
+    
+    .head p {
+        /* font-size: 10px;
+        padding-right: 30px; */
+        display: none;
+    }
+
+    /* ******* */
+
+    .head__info{
+        max-width: 220px;
+        gap: 10px;
+    }
+
+    .head__info__winddeg p{
+        display: none;
+    }
+
+    .wind__degr {
+        width: 50px;
+        height: 50px;
+    }
+
+    .wind__deg__icon{
+        width: 33px;
+        height: 33px;
+        margin-top: 7px;
+        margin-left: 7px;
+        padding: 8px;
+    }
+
+    .pole {
+        font-size: 10px;
+    }
+    
+    .pole_w {
+        top: calc(50% - 6px);
+        left: 3px;
+    }
+    
+    .pole_e {
+        top: calc(50% - 6px);
+        right: 3px;
+    }
+
+    .pole_n {
+        left: calc(50% - 3px);
+    }
+    
+    .pole_s {
+        left: calc(50% - 3px);
+    }
+    
+    
+    /* ******* */
+
+    .navbar__switch {
+        margin-right: 30px;
+    }
+
+    .switch__circle , #switcher:checked~.navbar__switch__cont .switch__circle {
+        padding: 10px;
+        width: 45px;
+        margin-top: -10px;
+    }
+    
+    .switch__circle::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle::after {
+        left: 25px;
+    }
+
+    #switcher:checked~.navbar__switch__cont .switch__circle {
+        position: absolute;
+        width: 45px;
+    }
+
+    .head__switch p {
+        font-size: 18px;
+    }
+
+    .head__switch__f {
+        margin-left: 10px;
+    }
+
+    .head__switch__s {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .aqi__fir {
+        display: none;
+    }
+
+    .aqi__sec {
+        display: block;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .head__icon {
+        max-width: 30px;
+    }
+
+    .head h2 {
+        font-size: 18px;
+        font-weight: 200;
+    }
+
+    
+}

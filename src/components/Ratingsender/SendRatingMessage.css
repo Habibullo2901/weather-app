@@ -1,0 +1,104 @@
+.rating-father{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px 30px 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(70, 131, 180, 0.438);
+    border-radius: 20px;
+}
+
+.rating-container h2 {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.input-sender{
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.rating-stars {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.rating {
+    /* width: 30px;
+    height: 30px; */
+    font-size: 35px;
+}
+
+.star {
+    color: rgb(255, 255, 255);
+}
+
+.active__rate .star {
+    color: gold;
+    filter: drop-shadow(0 0 15px gold);
+}
+
+.btn-sender{
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.btn-sender:hover{
+    background-color: #fff;
+    color: rgb(172, 146, 0);
+}
+
+.activesender{
+    background-color: #3cff00;
+    color: rgb(56, 56, 56);
+}
+
+.activesender:hover{
+    background-color: #3cff00;
+    color: rgb(56, 56, 56);
+}
+
+@media screen and (max-width: 425px) {
+    .rating-container h2 {
+        font-size: 20px;
+    }
+
+    .input-sender{
+        font-size: 15px;
+    }
+
+    .btn-sender{
+        font-size: 15px;
+    }
+
+    .rating{
+        font-size: 25px;
+    }
+}
